@@ -94,6 +94,7 @@
         text-align: center;
         margin: 0;
       }
+
       .card-body {
         display: flex;
         flex-direction: column;
@@ -125,20 +126,22 @@
       Your browser does not support the video tag.
     </video>
     <!-- Navbar -->
-    <nav
-      class="navbar fixed top-0 w-full bg-black justify-between px-10 py-4 z-50"
-    >
-      <div class="text-lg font-semibold tracking-widest m-2">
-        <a href="index.html">TERRITORY OF TOMORROW!</a>
+    <nav class="navbar fixed top-0 w-full bg-black justify-between px-10 py-4 z-50">
+      <div class="flex items-center">
+        
+        <!-- Logo -->
+        <div class="text-lg font-semibold tracking-widest m-2">
+          <a href="index.html">TERRITORY OF TOMORROW!</a>
+        </div>
       </div>
       <div class="relative">
-        <!-- ปุ่ม Dropdown -->
+        <!-- Dropdown Button -->
         <button
           id="dropdownButton"
           class="flex items-center text-sm tracking-widest m-2 bg-black text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
         >
           Creator Info
-          <!-- ลูกศรลง -->
+          <!-- Arrow Down -->
           <svg
             class="ml-2 w-4 h-4"
             fill="none"
@@ -155,7 +158,7 @@
           </svg>
         </button>
 
-        <!-- เมนู Dropdown -->
+        <!-- Dropdown Menu -->
         <div
           id="dropdownContent"
           class="dropdown-content absolute mt-2 bg-white border border-gray-200 rounded-lg shadow-lg p-4 hidden"
@@ -298,7 +301,7 @@
           </figure>
           <div class="card-body p-5 text-black">
             <h2 class="card-title">I said this 365 days ago, but..</h2>
-            <p>Brief description of the project goes here.</p>
+            <p>"A playful nod to time's passage, this phrase reminds us that while the New Year's wish may be the same as last year's, it's still filled with meaning, warmth, and a touch of humor."</p>
             <div class="card-actions justify-end pt-6">
               <a href="6.html">
                 <button class="btn btn-outline btn-black">Show More</button>
@@ -308,6 +311,16 @@
         </div>
       </div>
     </section>
+
+    <!-- Home Button -->
+<div class="flex justify-center py-4">
+    <a href="index.html" class="flex items-center text-gray-500 underline hover:text-pink-500">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
+        <path fill="currentColor" d="m222.14 105.85l-80-80a20 20 0 0 0-28.28 0l-80 80A19.86 19.86 0 0 0 28 120v96a12 12 0 0 0 12 12h64a12 12 0 0 0 12-12v-52h24v52a12 12 0 0 0 12 12h64a12 12 0 0 0 12-12v-96a19.86 19.86 0 0 0-5.86-14.15M204 204h-40v-52a12 12 0 0 0-12-12h-48a12 12 0 0 0-12 12v52H52v-82.35l76-76l76 76Z"/>
+      </svg>
+    </a>
+  </div>
+  
 
     <!-- Footer -->
     <footer class="text-center py-4">
@@ -325,14 +338,14 @@
     </footer>
 
     <script>
-      const dropdownButton = document.getElementById('dropdownButton')
-      const dropdownContent = document.getElementById('dropdownContent')
+      const dropdownButton = document.getElementById('dropdownButton');
+      const dropdownContent = document.getElementById('dropdownContent');
 
       dropdownButton.addEventListener('click', () => {
         // Toggle dropdown visibility
         dropdownContent.style.display =
-          dropdownContent.style.display === 'block' ? 'none' : 'block'
-      })
+          dropdownContent.style.display === 'block' ? 'none' : 'block';
+      });
 
       // Hide the dropdown when clicking outside of it
       window.addEventListener('click', (e) => {
@@ -340,9 +353,9 @@
           !dropdownButton.contains(e.target) &&
           !dropdownContent.contains(e.target)
         ) {
-          dropdownContent.style.display = 'none'
+          dropdownContent.style.display = 'none';
         }
-      })
+      });
     </script>
   </body>
 </html>
