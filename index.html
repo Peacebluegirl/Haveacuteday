@@ -23,11 +23,13 @@
       /* Fullscreen background video */
       .video-bg {
         position: fixed;
-        top: 0;
-        left: 0;
+        top: 50%;
+        left: 50%;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center center; /* Center the video content */
+        transform: translate(-50%, -50%); /* Center the video element itself */
         z-index: -1;
       }
 
@@ -101,19 +103,34 @@
           id="dropdownButton"
           class="flex items-center text-sm tracking-widest m-2 bg-black text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
         >
-        Creator Info
+          Creator Info
           <!-- ลูกศรลง -->
-          <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          <svg
+            class="ml-2 w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
           </svg>
         </button>
-      
+
         <!-- เมนู Dropdown -->
         <div
           id="dropdownContent"
           class="dropdown-content absolute mt-2 bg-white border border-gray-200 rounded-lg shadow-lg p-4 hidden"
         >
-          <img class="w-16 h-16 rounded-md mx-auto" src="peace2.jpg" alt="Profile Picture" />
+          <img
+            class="w-16 h-16 rounded-md mx-auto"
+            src="peace2.jpg"
+            alt="Profile Picture"
+          />
           <p class="text-center mt-2">Pimpitchaya K.</p>
         </div>
       </div>
@@ -125,22 +142,24 @@
     </div>
 
     <!-- Footer -->
-    <footer class="  text-center py-4">
-        <!-- Portfolio Button -->
-         <div class="opacity-100">
-      <a href="list.html" class="portfolio-btn m-10 opacity-100">Explore My Designs</a>
-    </div>
-    <div class="opacity-50">
-      <p class="text-black mt-10 mb-2">
-        Instagram
-        <a
-          href="https://www.instagram.com/territoryoftomorrow/"
-          target="_blank"
-          class="underline hover:text-pink-500"
-          >@territoryoftomorrow</a
+    <footer class="text-center py-4">
+      <!-- Portfolio Button -->
+      <div class="opacity-100">
+        <a href="list.html" class="portfolio-btn m-10 opacity-100"
+          >Explore My Designs</a
         >
-      </p>
-    </div>
+      </div>
+      <div class="opacity-50">
+        <p class="text-black mt-10 mb-2">
+          Instagram
+          <a
+            href="https://www.instagram.com/territoryoftomorrow/"
+            target="_blank"
+            class="underline hover:text-pink-500"
+            >@territoryoftomorrow</a
+          >
+        </p>
+      </div>
     </footer>
 
     <script>
@@ -162,10 +181,12 @@
           dropdownContent.style.display = 'none'
         }
       })
-      document.getElementById('dropdownButton').addEventListener('click', function() {
-    const dropdownContent = document.getElementById('dropdownContent');
-    dropdownContent.classList.toggle('hidden');
-  });
+      document
+        .getElementById('dropdownButton')
+        .addEventListener('click', function () {
+          const dropdownContent = document.getElementById('dropdownContent')
+          dropdownContent.classList.toggle('hidden')
+        })
     </script>
   </body>
 </html>
