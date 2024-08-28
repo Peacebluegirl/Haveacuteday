@@ -118,35 +118,34 @@
   }
 }
 
-.flip-in-hor-bottom {
-	-webkit-animation: flip-in-hor-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: flip-in-hor-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.swirl-in-fwd {
+	-webkit-animation: swirl-in-fwd 0.6s ease-out both;
+	        animation: swirl-in-fwd 0.6s ease-out both;
 }
-@-webkit-keyframes flip-in-hor-bottom {
+@-webkit-keyframes swirl-in-fwd {
   0% {
-    -webkit-transform: rotateX(80deg);
-            transform: rotateX(80deg);
+    -webkit-transform: rotate(-540deg) scale(0);
+            transform: rotate(-540deg) scale(0);
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotateX(0);
-            transform: rotateX(0);
+    -webkit-transform: rotate(0) scale(1);
+            transform: rotate(0) scale(1);
     opacity: 1;
   }
 }
-@keyframes flip-in-hor-bottom {
+@keyframes swirl-in-fwd {
   0% {
-    -webkit-transform: rotateX(80deg);
-            transform: rotateX(80deg);
+    -webkit-transform: rotate(-540deg) scale(0);
+            transform: rotate(-540deg) scale(0);
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotateX(0);
-            transform: rotateX(0);
+    -webkit-transform: rotate(0) scale(1);
+            transform: rotate(0) scale(1);
     opacity: 1;
   }
 }
-
     </style>
   </head>
 
@@ -202,7 +201,7 @@
     </nav>
 
     <!-- Main content -->
-<div class="flip-in-hor-bottom content mt-16">
+<div class="swirl-in-fwd content mt-16">
     <!-- Video Container -->
     <div class="video-container relative">
       <video autoplay loop muted playsinline>
@@ -224,8 +223,6 @@
   
   
 
-    </div>
-  </div>
   
 
     <!-- Footer -->
